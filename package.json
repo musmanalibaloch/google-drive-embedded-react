@@ -1,20 +1,46 @@
 {
-  "name": "test-app",
-  "version": "1.0.0",
-  "description": "",
-  "main": "const app = require.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
+  "name": "ui",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "@google-cloud/local-auth": "^2.1.0",
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "express-oauth2-jwt-bearer": "^1.2.0",
-    "googleapis": "^105.0.0",
-    "path": "^0.12.7"
+    "@azure/msal-react": "^1.5.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.2.0",
+    "gapi-script": "^1.2.0",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.6.0",
+    "react-dom": "^18.2.0",
+    "react-dropbox-chooser": "^0.0.5",
+    "react-google-drive-picker": "^1.2.0",
+    "react-google-login": "^5.2.2",
+    "react-onedrive-filepicker": "^0.1.3",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
