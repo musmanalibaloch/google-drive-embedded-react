@@ -18,15 +18,15 @@ function App() {
       supportDrives: true,
       multiselect: true,
       callbackFunction: (data) => {
-        if (data.action === 'cancel') {
-          console.log('User clicked cancel/close button')
-        }
+        // if (data.action === 'cancel') {
+        //   console.log('User clicked cancel/close button')
+        // }
 
         if (data.action === 'picked' && data.docs.length) {
           data.docs[0].serviceId === 'doc' ?
             setEmbedLink(data.docs[0].embedUrl.replace('preview', 'edit')) :
             setEmbedLink(data.docs[0].url)
-          console.log('User clicked cancel/close button')
+          // console.log('User clicked cancel/close button')
         }
         console.log(data, 'data')
       },
@@ -41,15 +41,15 @@ function App() {
 
   return (
     <div style={{ padding: 40 }}>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>`
         <button onClick={() => handleGooglePicker()}>Google Drive</button>
       </div>
       <div>
         <br /><br />
-        {/* {
+        {
           embedLink &&
           <iframe title='google drive' frameBorder="0" src={embedLink} width='100%' height='600'></iframe>
-        } */}
+        }
 
         <br />
         <DropboxChooser
@@ -71,9 +71,9 @@ function App() {
           onCancel={(result) => alert(JSON.stringify(result))}
         >
           <button>Open One Drive</button>
-        </ReactOneDriveFilePicker> */}
+        </ReactOneDriveFilePicker> /}
 
-        {/* <iframe title='google drive' frameBorder="0" src="https://www.dropbox.com/s/hvdseqx6aiy08xo/file_example_XLS_10.xlsx?dl=0" width='100%' height='600'></iframe> */}
+        {/ <iframe title='google drive' frameBorder="0" src="https://www.dropbox.com/s/hvdseqx6aiy08xo/file_example_XLS_10.xlsx?dl=0" width='100%' height='600'></iframe> */}
       </div>
     </div>
   )
